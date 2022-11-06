@@ -9,4 +9,4 @@ python3 -m pip install mutpy
 pip install coverage
 
 Rodar os casos de teste com mut.py
-mut.py --target calculator --unit-test calculator*test* -m
+mut.py --target calculator --unit-test calculator_test_ -m
