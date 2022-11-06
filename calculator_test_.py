@@ -14,7 +14,8 @@ class TestMethod(unittest.TestCase):
         self.assertEquals(calculator_option('*',3,3), 9,"Precisa ser 9")
 
     def test_division(self):
-        self.assertEquals(calculator_option('/',15,5), 3,"Precisar ser 3")
-
+        self.assertEquals(calculator_option('/',15,5), 3.0,"Precisar ser 3")
+          
+    
 if __name__ == '__main__':
     unittest.main()

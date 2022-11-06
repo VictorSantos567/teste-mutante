@@ -16,7 +16,6 @@ def calculator_option(operation, number_1,number_2):
     else:
         return ('You have not typed a valid operator')
 
-
 # if __name__ == '__main__':
 #     operation = input('''
 # Please type in the math operation you would like to complete:
