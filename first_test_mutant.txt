@@ -1,0 +1,244 @@
+[*] Start mutation process:
+   - targets: calculator
+   - tests: calculator_test_
+15 / 5 = 
+3 * 3 = 
+4 - 2 = 
+2 + 2 = 
+[*] 4 tests passed:
+   - calculator_test_ [0.00000 s]
+[*] Start mutants generation and execution:
+   - [#   1] AOR calculator: 
+--------------------------------------------------------------------------------
+   2: 
+   3: def calculator_option(operation, number_1, number_2):
+   4:     if operation == '+':
+   5:         print('{} + {} = '.format(number_1, number_2))
+-  6:         return number_1 + number_2
++  6:         return number_1 - number_2
+   7:     elif operation == '-':
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+--------------------------------------------------------------------------------
+15 / 5 = 
+3 * 3 = 
+4 - 2 = 
+2 + 2 = 
+[0.00204 s] killed by test_sum (calculator_test_.TestMethod)
+   - [#   2] AOR calculator: 
+--------------------------------------------------------------------------------
+   5:         print('{} + {} = '.format(number_1, number_2))
+   6:         return number_1 + number_2
+   7:     elif operation == '-':
+   8:         print('{} - {} = '.format(number_1, number_2))
+-  9:         return number_1 - number_2
++  9:         return number_1 + number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+  12:         return number_1 * number_2
+  13:     elif operation == '/':
+--------------------------------------------------------------------------------
+15 / 5 = 
+3 * 3 = 
+4 - 2 = 
+[0.00098 s] killed by test_subtraction (calculator_test_.TestMethod)
+   - [#   3] AOR calculator: 
+--------------------------------------------------------------------------------
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+- 12:         return number_1 * number_2
++ 12:         return number_1 / number_2
+  13:     elif operation == '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+  15:         return number_1 / number_2
+  16:     else:
+--------------------------------------------------------------------------------
+15 / 5 = 
+3 * 3 = 
+[0.00521 s] killed by test_multiplication (calculator_test_.TestMethod)
+   - [#   4] AOR calculator: 
+--------------------------------------------------------------------------------
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+- 12:         return number_1 * number_2
++ 12:         return number_1 // number_2
+  13:     elif operation == '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+  15:         return number_1 / number_2
+  16:     else:
+--------------------------------------------------------------------------------
+15 / 5 = 
+3 * 3 = 
+[0.00064 s] killed by test_multiplication (calculator_test_.TestMethod)
+   - [#   5] AOR calculator: 
+--------------------------------------------------------------------------------
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+- 12:         return number_1 * number_2
++ 12:         return number_1 ** number_2
+  13:     elif operation == '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+  15:         return number_1 / number_2
+  16:     else:
+--------------------------------------------------------------------------------
+15 / 5 = 
+3 * 3 = 
+[0.00180 s] killed by test_multiplication (calculator_test_.TestMethod)
+   - [#   6] AOR calculator: 
+--------------------------------------------------------------------------------
+  11:         print('{} * {} = '.format(number_1, number_2))
+  12:         return number_1 * number_2
+  13:     elif operation == '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+- 15:         return number_1 / number_2
++ 15:         return number_1 // number_2
+  16:     else:
+  17:         return 'You have not typed a valid operator'
+--------------------------------------------------------------------------------
+15 / 5 = 
+3 * 3 = 
+4 - 2 = 
+2 + 2 = 
+[0.00106 s] survived
+   - [#   7] AOR calculator: 
+--------------------------------------------------------------------------------
+  11:         print('{} * {} = '.format(number_1, number_2))
+  12:         return number_1 * number_2
+  13:     elif operation == '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+- 15:         return number_1 / number_2
++ 15:         return number_1 * number_2
+  16:     else:
+  17:         return 'You have not typed a valid operator'
+--------------------------------------------------------------------------------
+15 / 5 = 
+[0.00625 s] killed by test_division (calculator_test_.TestMethod)
+   - [#   8] COI calculator: 
+--------------------------------------------------------------------------------
+   1: 
+   2: 
+   3: def calculator_option(operation, number_1, number_2):
+-  4:     if operation == '+':
++  4:     if not (operation == '+'):
+   5:         print('{} + {} = '.format(number_1, number_2))
+   6:         return number_1 + number_2
+   7:     elif operation == '-':
+   8:         print('{} - {} = '.format(number_1, number_2))
+--------------------------------------------------------------------------------
+15 + 5 = 
+[0.00511 s] killed by test_division (calculator_test_.TestMethod)
+   - [#   9] COI calculator: 
+--------------------------------------------------------------------------------
+   3: def calculator_option(operation, number_1, number_2):
+   4:     if operation == '+':
+   5:         print('{} + {} = '.format(number_1, number_2))
+   6:         return number_1 + number_2
+-  7:     elif operation == '-':
++  7:     elif not (operation == '-'):
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+--------------------------------------------------------------------------------
+15 - 5 = 
+[0.00114 s] killed by test_division (calculator_test_.TestMethod)
+   - [#  10] COI calculator: 
+--------------------------------------------------------------------------------
+   6:         return number_1 + number_2
+   7:     elif operation == '-':
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+- 10:     elif operation == '*':
++ 10:     elif not (operation == '*'):
+  11:         print('{} * {} = '.format(number_1, number_2))
+  12:         return number_1 * number_2
+  13:     elif operation == '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+--------------------------------------------------------------------------------
+15 * 5 = 
+[0.00101 s] killed by test_division (calculator_test_.TestMethod)
+   - [#  11] COI calculator: 
+--------------------------------------------------------------------------------
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+  12:         return number_1 * number_2
+- 13:     elif operation == '/':
++ 13:     elif not (operation == '/'):
+  14:         print('{} / {} = '.format(number_1, number_2))
+  15:         return number_1 / number_2
+  16:     else:
+  17:         return 'You have not typed a valid operator'
+--------------------------------------------------------------------------------
+[0.00100 s] killed by test_division (calculator_test_.TestMethod)
+   - [#  12] ROR calculator: 
+--------------------------------------------------------------------------------
+   1: 
+   2: 
+   3: def calculator_option(operation, number_1, number_2):
+-  4:     if operation == '+':
++  4:     if operation != '+':
+   5:         print('{} + {} = '.format(number_1, number_2))
+   6:         return number_1 + number_2
+   7:     elif operation == '-':
+   8:         print('{} - {} = '.format(number_1, number_2))
+--------------------------------------------------------------------------------
+15 + 5 = 
+[0.00173 s] killed by test_division (calculator_test_.TestMethod)
+   - [#  13] ROR calculator: 
+--------------------------------------------------------------------------------
+   3: def calculator_option(operation, number_1, number_2):
+   4:     if operation == '+':
+   5:         print('{} + {} = '.format(number_1, number_2))
+   6:         return number_1 + number_2
+-  7:     elif operation == '-':
++  7:     elif operation != '-':
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+--------------------------------------------------------------------------------
+15 - 5 = 
+[0.00000 s] killed by test_division (calculator_test_.TestMethod)
+   - [#  14] ROR calculator: 
+--------------------------------------------------------------------------------
+   6:         return number_1 + number_2
+   7:     elif operation == '-':
+   8:         print('{} - {} = '.format(number_1, number_2))
+   9:         return number_1 - number_2
+- 10:     elif operation == '*':
++ 10:     elif operation != '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+  12:         return number_1 * number_2
+  13:     elif operation == '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+--------------------------------------------------------------------------------
+15 * 5 = 
+[0.00105 s] killed by test_division (calculator_test_.TestMethod)
+   - [#  15] ROR calculator: 
+--------------------------------------------------------------------------------
+   9:         return number_1 - number_2
+  10:     elif operation == '*':
+  11:         print('{} * {} = '.format(number_1, number_2))
+  12:         return number_1 * number_2
+- 13:     elif operation == '/':
++ 13:     elif operation != '/':
+  14:         print('{} / {} = '.format(number_1, number_2))
+  15:         return number_1 / number_2
+  16:     else:
+  17:         return 'You have not typed a valid operator'
+--------------------------------------------------------------------------------
+[0.00067 s] killed by test_division (calculator_test_.TestMethod)
+[*] Mutation score [0.30173 s]: 93.3%
+   - all: 15
+   - killed: 14 (93.3%)
+   - survived: 1 (6.7%)
+   - incompetent: 0 (0.0%)
+   - timeout: 0 (0.0%)

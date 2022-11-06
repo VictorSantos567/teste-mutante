@@ -1,0 +1,13 @@
+astmonkey==0.3.6
+coverage==6.5.0
+Jinja2==3.1.2
+linecache2==1.0.0
+MarkupSafe==2.1.1
+MutPy==0.6.1
+pydot==1.4.2
+pyparsing==3.0.9
+PyYAML==6.0
+six==1.16.0
+termcolor==2.1.0
+traceback2==1.4.0
+unittest2==1.1.0
