@@ -1,12 +1,14 @@
-# teste-mutante
+# Atividade de Teste Mutante
 
-Ativ Teste Mutante
-
-Instalar o MutPy
+Requisitos: 
+- Instalar o MutPy
 https://pypi.org/project/MutPy/
 
-python3 -m pip install mutpy
-pip install coverage
+Em um terminal, rode os comandos:
+- pip install mutpy
 
-Rodar os casos de teste com mut.py
-mut.py --target calculator --unit-test calculator_test_ -m
+Para verificar cobertura de teste:
+- pip install coverage
+
+Para executar os casos de teste com mut.py neste contexto:
+- mut.py --target calculator --unit-test calculator_test_ -m
